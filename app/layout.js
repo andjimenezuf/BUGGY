@@ -1,8 +1,12 @@
-import { Outfit  } from "next/font/google";
+import { Varela_Round  } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 
-const outfit = Outfit({ subsets: ["latin"] });
+const outfit = Varela_Round ({
+  weight: ['400'],
+  subsets: ["latin"],
+});
+
 
 export const metadata = {
   title: "Create Next App",
