@@ -5,6 +5,7 @@ import {LayoutGrid,PiggyBank,ReceiptText,ShieldCheck} from 'lucide-react'
 import { UserButton } from '@clerk/nextjs';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+
 function SideNav() {
     const menuList=[
         {
@@ -35,11 +36,7 @@ function SideNav() {
     },[path])
   return (
     <div className='h-screen p-5 border shadow-sm'>
-        <Image src={'/logo.png'}
-        alt='logo'
-        width={160}
-        height={100}
-        />
+        
         <div className='mt-5'>
             {menuList.map((menu,index)=>(
                 <Link href={menu.path} key={index}>

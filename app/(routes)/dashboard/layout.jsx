@@ -27,15 +27,19 @@ function DashboardLayout({children}) {
     }
   }
   return (
+    <div className="flex flex-col h-screen">
     <div>
-        <div className='fixed md:w-64 hidden md:block '>
-            <SideNav/>
-        </div>
-        <div className='md:ml-64 '>
-          <DashboardHeader/>
+      <DashboardHeader/>
+    </div>
+    <div className="flex flex-1">
+      <div className='hidden md:block md:w-64'>
+        <SideNav/>
+      </div>
+      <div className='flex-1 p-4 overflow-auto'>
         {children}
-        </div>
-        </div>
+      </div>
+    </div>
+  </div>
   )
 }
 
